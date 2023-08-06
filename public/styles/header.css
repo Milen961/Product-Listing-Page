@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo img {
+    height: 40px; /* Adjust the height of the logo as needed */
+  }
+  
+  .nav-menu {
+    display: flex;
+  }
+  
+  .menu-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-list li {
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 5px 10px;
+  }
+  
+  .menu-list li.active {
+    background-color: #ddd;
+  }
+  .product-counter {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+  }
