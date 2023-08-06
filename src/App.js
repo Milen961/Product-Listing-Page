@@ -8,7 +8,7 @@ import { useState } from 'react';
 import ProductTile from './components/ProductTile/ProductTile';
 
 function App() {
-  // Sample data for products, you can replace it with your actual data
+ 
   const products = [
     {
       id: 1,
@@ -17,7 +17,7 @@ function App() {
       price: 100,
       discountedPrice: 80,
       ratings: 4,
-      image: 'product1.jpg', // Replace with the actual image URL
+      image: 'product1.jpg', 
       category: 'Bags',
     },
     {
@@ -26,7 +26,7 @@ function App() {
       description: 'This is the description of Product 2.',
       price: 150,
       ratings: 5,
-      image: 'product2.jpg', // Replace with the actual image URL
+      image: 'product2.jpg', 
       category: 'Shoes',
     },
     // Add more products here
@@ -34,12 +34,12 @@ function App() {
 
   const [selectedCategory, setSelectedCategory] = useState('Bags'); // Default category is "Bags"
 
-  // Filter products based on the selected category
+ 
   const filteredProducts = products.filter(
     (product) => product.category === selectedCategory
   );
 
-  // Function to handle category change when clicking on the header
+ 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
@@ -47,7 +47,6 @@ function App() {
   return (
     <div className="App">
       <Header onCategoryChange={handleCategoryChange} />
-      {/* Product Grid */}
       <div className="product-grid">
         {filteredProducts.map((product) => (
           <ProductTile key={product.id} product={product} />
