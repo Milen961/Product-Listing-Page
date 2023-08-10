@@ -3,6 +3,9 @@ import React from 'react';
 const Sort = ({ onSortOptionChange }) => {
   const handleSortOptionChange = (option) => {
     onSortOptionChange(option);
+
+
+    
   };
 
   return (
