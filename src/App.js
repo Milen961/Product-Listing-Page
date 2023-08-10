@@ -1,94 +1,143 @@
+
+// import React, { useState } from 'react';
+// import Header from './components/Header/Header';
+// import Footer from './components/Footer/Footer';
+// import ProductTile from './components/ProductTile/ProductTile';
+// import LoadMore from './components/LoadMore/LoadMore';
+// import Filter from './components/Filter/Filter';
+// import products from './components/Products/Products';
+// import ProductCounter from './components/ProductCounter/ProductCounter';
+
+// function App() {
+//   const [selectedCategory, setSelectedCategory] = useState('Bags');
+//   const [sortOption, setSortOption] = useState('alphabetical-ascending');
+//   const [sortedProducts, setFilteredProducts] = useState(products);
+//   const [loadMoreClicked, setLoadMoreClicked] = useState(false);
+//   const [displayedProductCount, setDisplayedProductCount] = useState(5);
+
+//   const handleCategoryChange = (category) => {
+//     setSelectedCategory(category);
+//     setFilteredProducts(products.filter((product) => product.category === category));
+//     setLoadMoreClicked(false); // Reset loadMoreClicked when category changes
+//     setDisplayedProductCount(5); // Reset displayedProductCount when category changes
+//   };
+
+//   const handleSortOptionChange = (option) => {
+//     setSortOption(option);
+//   };
+
+//   const getSortedProducts = () => {
+//     switch (sortOption) {
+//       case 'alphabetical-ascending':
+//         return sortedProducts.slice().sort((a, b) => a.name.localeCompare(b.name));
+//       case 'alphabetical-descending':
+//         return sortedProducts.slice().sort((a, b) => b.name.localeCompare(a.name));
+//       case 'price-ascending':
+//         return sortedProducts.slice().sort((a, b) => a.price - b.price);
+//       case 'price-descending':
+//         return sortedProducts.slice().sort((a, b) => b.price - a.price);
+//       default:
+//         return sortedProducts;
+//     }
+//   };
+
+//   const displayedProducts = getSortedProducts().slice(0, displayedProductCount);
+
+//   const handleLoadMore = () => {
+//     setLoadMoreClicked(true);
+//     setDisplayedProductCount(displayedProductCount + 5); // Increase displayedProductCount
+//   };
+
+//   const handleFilterChange = (filteredProducts) => {
+//     setFilteredProducts(filteredProducts);
+//     setLoadMoreClicked(false); // Reset loadMoreClicked when filter changes
+//     setDisplayedProductCount(5); // Reset displayedProductCount when filter changes
+//   };
+
+//   return (
+//     <div className="App">
+//       <Header
+//         onCategoryChange={handleCategoryChange}
+//         onSortOptionChange={handleSortOptionChange}
+//       />
+
+//       <div className="product-container">
+//         {/* Filter */}
+//         <Filter products={products} onFilterChange={handleFilterChange} />
+
+//         {/* Product Grid */}
+//         <div className="product-grid">
+//           {displayedProducts.map((product) => (
+//             <ProductTile key={product.id} product={product} />
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Load More */}
+//       {!loadMoreClicked && displayedProductCount < getSortedProducts().length && (
+//         <LoadMore onLoadMore={handleLoadMore} />
+//       )}
+//       <Footer />
+//     </div>
+//   );
+// }
+
+// export default App;
+
 import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ProductTile from './components/ProductTile/ProductTile';
+import LoadMore from './components/LoadMore/LoadMore';
+import Filter from './components/Filter/Filter';
+import products from './components/Products/Products';
+import ProductCounter from './components/ProductCounter/ProductCounter'; // Import the ProductCounter component
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState('Bags');
+  const [sortOption, setSortOption] = useState('alphabetical-ascending');
+  const [sortedProducts, setFilteredProducts] = useState(products);
+  const [loadMoreClicked, setLoadMoreClicked] = useState(false);
+  const [displayedProductCount, setDisplayedProductCount] = useState(5);
 
-  const products = [
-    {
-      id: 1,
-      name: 'Product 1',
-      description: 'This is the description of Product 1.',
-      price: 100,
-      discountedPrice: 80,
-      ratings: 4,
-      image: 'product1.jpg', 
-      category: 'Bags',
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      description: 'This is the description of Product 2.',
-      price: 140,
-      ratings: 5,
-      image: 'product2.jpg', 
-    },
-    {
-      id: 3,
-      name: 'b',
-      description: 'This is the description of Product 2.',
-      price: 150,
-      ratings: 5,
-      image: 'product2.jpg', 
-      category: 'Shoes',
-    },
-    {
-      id: 4,
-      name: 'a',
-      description: 'This is the description of Product 2.',
-      price: 160,
-      ratings: 5,
-      image: 'product2.jpg', 
-      category: 'Shoes',
-    },
-    {
-      id: 4,
-      name: 'a',
-      description: 'This is the description of Product 2.',
-      price: 160,
-      ratings: 5,
-      image: 'product2.jpg', 
-      category: 'Bags',
-    },
-    
-  ];
-
- 
-  const [selectedCategory, setSelectedCategory] = useState('Bags'); // Default category is "Bags"
-  const [sortOption, setSortOption] = useState('alphabetical-ascending'); // Default sorting option
-
-  // Function to handle category change when clicking on the header
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
+    setFilteredProducts(products.filter((product) => product.category === category));
+    setLoadMoreClicked(false); // Reset loadMoreClicked when category changes
+    setDisplayedProductCount(5); // Reset displayedProductCount when category changes
   };
 
-  // Function to handle sorting option change
   const handleSortOptionChange = (option) => {
     setSortOption(option);
   };
 
-  // Function to get the filtered and sorted products based on category and sort option
-  const getFilteredAndSortedProducts = () => {
-    const filteredProducts = products.filter(
-      (product) => product.category === selectedCategory
-    );
-
+  const getSortedProducts = () => {
     switch (sortOption) {
       case 'alphabetical-ascending':
-        return filteredProducts.slice().sort((a, b) => a.name.localeCompare(b.name));
+        return sortedProducts.slice().sort((a, b) => a.name.localeCompare(b.name));
       case 'alphabetical-descending':
-        return filteredProducts.slice().sort((a, b) => b.name.localeCompare(a.name));
+        return sortedProducts.slice().sort((a, b) => b.name.localeCompare(a.name));
       case 'price-ascending':
-        return filteredProducts.slice().sort((a, b) => a.price - b.price);
+        return sortedProducts.slice().sort((a, b) => a.price - b.price);
       case 'price-descending':
-        return filteredProducts.slice().sort((a, b) => b.price - a.price);
+        return sortedProducts.slice().sort((a, b) => b.price - a.price);
       default:
-        return filteredProducts;
+        return sortedProducts;
     }
   };
 
-  const sortedProducts = getFilteredAndSortedProducts();
+  const displayedProducts = getSortedProducts().slice(0, displayedProductCount);
+
+  const handleLoadMore = () => {
+    setLoadMoreClicked(true);
+    setDisplayedProductCount(displayedProductCount + 5);
+  };
+
+  const handleFilterChange = (filteredProducts) => {
+    setFilteredProducts(filteredProducts);
+    setLoadMoreClicked(false); 
+    setDisplayedProductCount(5); 
+  };
 
   return (
     <div className="App">
@@ -96,15 +145,36 @@ function App() {
         onCategoryChange={handleCategoryChange}
         onSortOptionChange={handleSortOptionChange}
       />
-      {/* Product Grid */}
-      <div className="product-grid">
-        {sortedProducts.map((product) => (
-          <ProductTile key={product.id} product={product} />
-        ))}
+
+      <div className="product-container">
+       <div className="filter-counter-container">
+        {/* Filter */}
+        <Filter products={products} onFilterChange={handleFilterChange} />
+
+        {/* Product Counter */}
+        <ProductCounter
+          currentCount={displayedProductCount}
+          totalCount={getSortedProducts().length}
+        />
+        </div>
+    
+
+        {/* Product Grid */}
+        <div className="product-grid">
+          {displayedProducts.map((product) => (
+            <ProductTile key={product.id} product={product} />
+          ))}
+        </div>
       </div>
+
+      {/* Load More */}
+      {!loadMoreClicked && displayedProductCount < getSortedProducts().length && (
+        <LoadMore onLoadMore={handleLoadMore} />
+      )}
       <Footer />
     </div>
   );
 }
 
 export default App;
+
