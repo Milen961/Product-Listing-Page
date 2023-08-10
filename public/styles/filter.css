@@ -1,0 +1,77 @@
+.filter {
+    width: 300px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    
+  }
+  .filter-counter-container{
+    margin-right: auto;
+    margin-left: 29px;
+  }
+  
+  .filter.open {
+    width: 350px; 
+  }
+  
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .filter-icon {
+    font-size: 18px;
+    padding: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter.open .filter-icon {
+    background-color: #666;
+    color: #fff;
+  }
+  
+  .filter-content {
+    display: none;
+    padding: 10px;
+  }
+  
+  .filter.open .filter-content {
+    display: block;
+  }
+  
+  .filter-content label,
+  .filter-content input,
+  .filter-content button {
+    margin: 5px 0;
+    width: 100%;
+  }
+  
+  .filter-content button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-content button:hover {
+    background-color: #444;
+  }
+  

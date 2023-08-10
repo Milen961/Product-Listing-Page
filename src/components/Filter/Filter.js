@@ -4,7 +4,7 @@ const Filter = ({ products, onFilterChange }) => {
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
-
+  const [isFilterOpen, setIsFilterOpen] = useState(false); 
   const handleApplyFilter = () => {
     const filteredProducts = products.filter((product) => {
       const meetsPriceCriteria =
@@ -18,11 +18,21 @@ const Filter = ({ products, onFilterChange }) => {
     });
 
     onFilterChange(filteredProducts);
+    
   };
 
-  return (
-    <div className="filter">
+  const handleToggleFilter = () => {
+    setIsFilterOpen(!isFilterOpen);
+  }
+
+  
+return (
+  <div className={`filter ${isFilterOpen ? 'open' : ''}`}>
+    <div className="filter-header" onClick={handleToggleFilter}>
       <h3>Filter</h3>
+      <div className="filter-icon">{isFilterOpen ? '-' : '+'}</div>
+    </div>
+    <div className="filter-content">
       <label htmlFor="minPrice">Min Price:</label>
       <input
         type="number"
@@ -30,7 +40,8 @@ const Filter = ({ products, onFilterChange }) => {
         value={minPrice}
         onChange={(e) => setMinPrice(e.target.value)}
       />
-      <label htmlFor="maxPrice">Max Price:</label>
+
+<label htmlFor="maxPrice">Max Price:</label>
       <input
         type="number"
         id="maxPrice"
@@ -46,7 +57,8 @@ const Filter = ({ products, onFilterChange }) => {
       />
       <button onClick={handleApplyFilter}>Apply Filter</button>
     </div>
-  );
+  </div>
+);
 };
 
 export default Filter;
