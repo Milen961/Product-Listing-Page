@@ -1,48 +1,111 @@
 .product-tile {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .product-tile img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .product-name {
-    font-size: 18px;
-    font-weight: bold;
+  width: calc(20% - 20px);
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.product-counter {
+  padding: 5px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+
+.product-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-tile img {
+   width: 80%;
+   height: 60%;
+   
+}
+
+.product-name {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discounted-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.original-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.ratings {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.star {
+  font-size: 18px;
+  color: #f39c12;
+  margin: 0 1px;
+}
+
+.add-to-cart-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #2980b9;
+}
+@media (max-width: 768px) {
+  .product-tile {
+    width: 100%; 
     margin: 10px 0;
   }
-  
-  .product-description {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .price {
-    font-size: 16px;
-  }
-  
-  .discounted-price {
-    font-size: 16px;
-    color: red;
-  }
-  
-  .ratings {
-    margin: 10px 0;
-  }
-  
-  .star {
-    color: gold;
-  }
-  
-  .add-to-cart-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 14px;
-  }
+}
