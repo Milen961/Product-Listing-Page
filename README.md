@@ -1,7 +1,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Project Summary
 This project is a simple web application that displays a collection of products and allows users to filter, sort, and view them. The application is built using React, a popular JavaScript library for building user interfaces, and it showcases various concepts in web development such as state management, filtering, sorting, and responsive design.
 
 Technologies Used
