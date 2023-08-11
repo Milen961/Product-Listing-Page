@@ -1,70 +1,48 @@
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Project Summary
+This project is a simple web application that displays a collection of products and allows users to filter, sort, and view them. The application is built using React, a popular JavaScript library for building user interfaces, and it showcases various concepts in web development such as state management, filtering, sorting, and responsive design.
 
-In the project directory, you can run:
+Technologies Used
+React: The project is primarily developed using React. React is a powerful JavaScript library for building user interfaces, providing a component-based architecture and efficient rendering.
 
-### `npm start`
+JavaScript: The core logic of the application is implemented using JavaScript, including handling events, filtering, sorting, and dynamic content rendering.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+CSS: Cascading Style Sheets (CSS) are used to style the application, ensuring a visually appealing and responsive user interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+HTML: The structure of the application is built using HTML, defining the layout and components of the user interface.
 
-### `npm test`
+Features
+Product Display: The application displays a collection of products, including their name, description, price, discounted price, ratings, and an option to add them to the cart.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Filtering: Users can filter products by category using a dropdown filter. The displayed products automatically update based on the selected category.
 
-### `npm run build`
+Sorting: Products can be sorted by various options such as alphabetical order (both ascending and descending) and price (both ascending and descending).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Load More: Users can load more products from the selected category, ensuring smooth navigation through the product list.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Responsive Design: The application is designed to be responsive, ensuring optimal viewing and usability on various devices including desktops, tablets, and mobile phones.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Usage
+Clone the repository to your local machine.
+Install the required dependencies using npm install.
+Run the development server using npm start.
+Open your web browser and navigate to http://localhost:3000 to access the application.
 
-### `npm run eject`
+Future Enhancements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Pagination: Implement pagination to display a limited number of products per page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Shopping Cart: Implement a shopping cart feature to allow users to add products and proceed to checkout.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+User Authentication: Add user authentication to enable personalized experiences and saved preferences.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Product Details: Create a detailed product view to provide more information about each product.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Challenges
+ I had some difficulty with structuring the css for ProducTuile and the content inside that can be seen in the project. Also, app.js is full functionality that needs to be moved into the specific components.
+ 
+ 
+ 
