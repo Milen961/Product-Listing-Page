@@ -43,10 +43,14 @@
 }
 
 .product-tile img {
-   width: 80%;
-   height: 60%;
-   
+ 
+  object-fit:fill;
+  object-position:center, center;
+  max-width:50%;
+  max-height: 47%;
+  
 }
+
 
 .product-name {
   font-size: 16px;

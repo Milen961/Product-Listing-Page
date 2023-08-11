@@ -1,3 +1,6 @@
 @import "header.css";
 @import "footer.css";
-@import "ProductTile.css"
+@import "ProductTile.css";
+@import "filter.css";
+@import "sort.css";
+@import "app.css"
