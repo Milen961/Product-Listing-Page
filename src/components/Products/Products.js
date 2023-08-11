@@ -76,7 +76,7 @@ const products = [
     {
       id: 9,
       name: 'PULL&BEAR',
-      description: 'Affordable shoe but poor quality and uncomfortable experience',
+      description: 'Affordable shoe but poor quality',
       price: 35,
       discountedPrice: 25,
       ratings: 2,
@@ -106,7 +106,7 @@ const products = [
     {
       id: 12,
       name: 'Sneakers',
-      description: 'Affordable shoe but poor quality and uncomfortable experience',
+      description: 'Affordable shoe but poor quality',
       price: 30,
       ratings: 2,
       image: 'https://n.nordstrommedia.com/id/sr3/2f380a44-e4b0-47a3-861f-68a338a5511e.jpeg?h=365&w=240&dpr=2', 
@@ -119,7 +119,7 @@ const products = [
       price: 300,
       discountedPrice: 275,
       ratings: 5,
-      image: 'https://static.basketrevolution.es/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/d/q/dq4122-100-2.jpg', 
+      image: 'https://static.nike.com/a/images/t_default/df202e47-3b8f-4d70-9b95-d22218430a45/air-jordan-xxxvii-low-basketball-shoes-7x01GN.png', 
       category: 'Shoes',
     },
     {
@@ -147,8 +147,8 @@ const products = [
       name: 'Addidas Sneaker',
       description: 'Good sneaker for daily use ',
       price: 100,
-      ratings: 3.5,
-      image: 'https://i.pinimg.com/originals/2a/db/35/2adb3568b5f26fb0f949cd5c69e4be08.jpg', 
+      ratings: 3,
+      image: 'https://images.journeys.ca/images/products/1_581834_FS_ALT5.JPG', 
       category: 'Shoes',
     },
     {
@@ -181,7 +181,7 @@ const products = [
     },
     {
       id: 20,
-      name: ' Under Armour Men Project Rock Duffle Backpack',
+      name: 'Under Armour Men Project Rock',
       description: 'A good bag for hiking',
       price: 90,
       discountedPrice: 80,
@@ -190,6 +190,25 @@ const products = [
       category: 'Bags',
     },
     
+    {
+      id: 21,
+      name: 'Under Armour',
+      description: 'A good bag for everyday use',
+      price: 70,
+      ratings: 4,
+      image: 'https://www.tradeinn.com/f/13898/138980143/under-armour-halftime-backpack.jpg', 
+      category: 'Bags',
+    },
+    {
+      id: 22,
+      name: 'Under Armour',
+      description: 'A good bag for everyday use',
+      price: 80,
+      discountedPrice: 45,
+      ratings: 4,
+      image: 'https://classic.cdn.media.amplience.net/i/hibbett/1746C_0256_main?w=300&h=300&img404=404&v=1', 
+      category: 'Bags',
+    },
     
   
   ];

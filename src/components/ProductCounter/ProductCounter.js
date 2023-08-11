@@ -1,9 +1,8 @@
-import React from 'react';
 
-const ProductCounter = ({ currentCount, totalCount }) => {
+const ProductCounter = ({ currentCount}) => {
   return (
     <div className="product-counter">
-      {`Showing ${currentCount} out of ${totalCount} products`}
+      {`Showing ${currentCount} products`}
     </div>
   );
 };

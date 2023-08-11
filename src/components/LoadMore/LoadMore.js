@@ -1,5 +1,3 @@
-import React from 'react';
-
 const LoadMore = ({ onLoadMore, isAllLoaded }) => {
   return (
     <div className="load-more">

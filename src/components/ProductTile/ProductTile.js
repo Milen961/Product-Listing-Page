@@ -8,6 +8,7 @@ const ProductTile = ({ product }) => {
 
   return (
     <div className="product-tile">
+  
       <img className="product-img" src={image} alt={name} />
       <h3 className="product-name">{name}</h3>
       <p className="product-description">{description}</p>
@@ -27,7 +28,8 @@ const ProductTile = ({ product }) => {
       <button onClick={handleAddToCart} className="add-to-cart-button">
         Add to Cart
       </button>
-    </div>
+      </div>
+    
   );
 };
 

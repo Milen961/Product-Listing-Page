@@ -1,4 +1,3 @@
-import React from "react";
 
 const Footer = () => {
     return (
@@ -6,8 +5,8 @@ const Footer = () => {
         <div className="footer-links">
          
           <a href="#">T&C</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Contact Us</a>
+          <a href="">Privacy Policy</a>
+          <a href="https://github.com/Milen961">Contact Us</a>
         </div>
       </footer>
     );
